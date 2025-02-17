@@ -1,9 +1,7 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
-
 @import "tailwindcss";
 
 body {
-  font-family:"Montserrat", serif;
+  font-family: "Montserrat", serif;
 }
 
 @layer utilities {
@@ -12,10 +10,13 @@ body {
   }
 
   .btn_primary {
-    @apply bg-[#486284] text-white
+    @apply bg-[#486284] text-white;
   }
 
   .btn_secondary {
-    @apply bg-[#F5F5F5] text-[#486284] border-[2px] border-[#486284]
+    @apply bg-[#F5F5F5] text-[#486284] border-[2px] border-[#486284];
   }
+}
+.clip-path {
+  clip-path: ellipse(100% 90% at 50% 100%);
 }

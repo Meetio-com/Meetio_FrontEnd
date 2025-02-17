@@ -1,13 +1,16 @@
-import Header from "./components/Header"
-import Hero from "./components/Hero"
+import { Routes, Route } from "react-router-dom";
+import About from "./components/about-page/page";
 
-const App = () => {
+function App() {
   return (
-    <>
-    <Header />
-    <Hero />
-    </>
-  )
+    <Routes>
+      <Route
+        path="/"
+        element={<div className="p-10 text-center">Home Page</div>}
+      />
+      <Route path="/about" element={<About />} />
+    </Routes>
+  );
 }
 
-export default App
+export default App;
