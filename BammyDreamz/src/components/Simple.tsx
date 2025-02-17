@@ -5,7 +5,7 @@ import SimpleMeetioImage2 from "../assets/BammyImages/hero1.png";
 import SimpleRectangle from "../assets/BammyImages/Rectangle 604.png";
 import { FaChevronLeft, FaChevronRight } from "react-icons/fa";
 
-const images = [SimpleMeetioImage1, SimpleMeetioImage2, SimpleMeetioImage];
+const images = [SimpleMeetioImage, SimpleMeetioImage1, SimpleMeetioImage2];
 
 const Simple: React.FC = () => {
     const [currentIndex, setCurrentIndex] = useState(0);
@@ -29,13 +29,13 @@ const Simple: React.FC = () => {
                 </p>
             </div>
 
-            <div className="flex flex-col md:flex-row justify-between items-center w-full px-5 space-y-4 md:space-x-6">
+            <div className="flex flex-col md:flex-row max-w-[1160px] justify-between items-start w-full space-y-4 md:space-x-6">
                 {/* Left Side */}
-                <div className="flex flex-col w-full md:w-1/3 lg:w-1/4 items-center">
+                <div className="flex flex-col w-full md:w-1/3 lg:w-1/4 mt-4 items-center self-stretch">
                     <img
                         src={SimpleRectangle}
                         alt="Rectangle"
-                        className="rounded-md w-full max-w-[600px] h-auto"
+                        className="rounded-md h-[500px] w-[full] md:w-[1000px] lg:w-[1100px] object-cover"
                     />
                     <h3 className="text-lg md:text-xl lg:text-2xl text-center text-white mt-3">
                         Host. Connect. Engage. Seamlessly
@@ -43,7 +43,7 @@ const Simple: React.FC = () => {
                 </div>
 
                 {/* Right Side */}
-                <div className="relative flex items-center w-full md:w-2/3 lg:w-3/4">
+                <div className="relative flex items-center w-full md:w-2/3 lg:w-3/4 self-stretch">
                     <button
                         title="Previous"
                         onClick={prevImage}
@@ -55,7 +55,7 @@ const Simple: React.FC = () => {
                     <img
                         src={images[currentIndex]}
                         alt={`Image ${currentIndex + 1}`}
-                        className="w-full max-w-[860px] h-auto object-cover rounded-md"
+                        className="w-full h-full object-cover rounded-md"
                     />
 
                     <button
@@ -67,6 +67,7 @@ const Simple: React.FC = () => {
                     </button>
                 </div>
             </div>
+
         </section>
     );
 };
