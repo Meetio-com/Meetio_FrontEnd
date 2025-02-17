@@ -1,4 +1,7 @@
 import React from "react";
+import Slider from "react-slick";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 import event1 from "../event1.png";
 import event2 from "../event2.png";
 import event3 from "../event3.png";
@@ -20,49 +23,78 @@ import {
 } from "react-icons/fa";
 
 const MeetioEvents = () => {
+  const settings = {
+    dots: true,
+    infinite: true,
+    speed: 500,
+    slidesToShow: 3,
+    slidesToScroll: 1,
+    responsive: [
+      {
+        breakpoint: 1024,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 1,
+          infinite: true,
+          dots: true,
+        },
+      },
+      {
+        breakpoint: 768,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+        },
+      },
+    ],
+  };
+
   return (
     <div className="max-w-6xl mx-auto p-6">
       {/* Upcoming Events Section */}
       <h2 className="text-3xl font-bold mb-6">Upcoming Online Events</h2>
-      <div className="grid md:grid-cols-3 gap-6">
+      <Slider {...settings}>
         {[event1, event2, event3].map((image, index) => (
-          <div
-            key={index}
-            className="bg-white shadow-md rounded-lg overflow-hidden"
-          >
-            <img src={image} alt="Event" className="w-full h-48 object-cover" />
-            <div className="p-4">
-              <p className="text-blue-600 text-sm font-semibold">
-                JAN 16 2025 | 7:30 PM GMT
-              </p>
-              <h3 className="text-lg font-bold mt-1">
-                Career Meetup with Designers and Developers
-              </h3>
-              <div className="flex items-center mt-3">
-                <div className="flex -space-x-2">
-                  {[...Array(5)].map((_, i) => (
-                    <img
-                      key={i}
-                      src={avatar}
-                      alt="Attendee"
-                      className="w-8 h-8 rounded-full border-2 border-white"
-                    />
-                  ))}
+          <div key={index} className="px-2">
+            <div className="bg-white shadow-md rounded-lg overflow-hidden">
+              <img
+                src={image}
+                alt="Event"
+                className="w-full h-48 object-cover"
+              />
+              <div className="p-4">
+                <p className="text-blue-600 text-sm font-semibold">
+                  JAN 16 2025 | 7:30 PM GMT
+                </p>
+                <h3 className="text-lg font-bold mt-1">
+                  Career Meetup with Designers and Developers
+                </h3>
+                <div className="flex items-center mt-3">
+                  <div className="flex -space-x-2">
+                    {[...Array(5)].map((_, i) => (
+                      <img
+                        key={i}
+                        src={avatar}
+                        alt="Attendee"
+                        className="w-8 h-8 rounded-full border-2 border-white"
+                      />
+                    ))}
+                  </div>
+                  <span className="ml-2 text-sm font-semibold">+10</span>
                 </div>
-                <span className="ml-2 text-sm font-semibold">+10</span>
+                <p className="text-blue-500 mt-3 cursor-pointer">More Details</p>
               </div>
-              <p className="text-blue-500 mt-3 cursor-pointer">More Details</p>
             </div>
           </div>
         ))}
-      </div>
+      </Slider>
 
       {/* Take Control Section */}
       <div className="mt-12 flex flex-col md:flex-row items-center justify-between">
         {/* Left Side - Text */}
         <div className="md:w-1/2 text-left">
           <h2 className="text-2xl font-bold leading-tight">
-            Take control of your meetings with our  {" "}
+            Take control of your meetings with our{" "}
             <span className="text-yellow-500">virtual assistant</span> services
           </h2>
 
@@ -89,7 +121,6 @@ const MeetioEvents = () => {
                 <h3 className="text-lg font-bold text-gray-900">
                   Collaborating Power
                 </h3>
-
                 <p className="text-gray-600 leading-relaxed">
                   Empowering teams with seamless communication, smart
                   collaboration tools, and a dynamic virtual workspace for
@@ -109,8 +140,8 @@ const MeetioEvents = () => {
                 </h3>
                 <p className="text-gray-600 leading-relaxed">
                   Tailor your meeting experience with flexible settings,
-                  personalized features, and seamless integrations to match your
-                  unique workflow.
+                  personalized features, and seamless integrations to match
+                  your unique workflow.
                 </p>
               </div>
             </div>
@@ -201,7 +232,5 @@ const MeetioEvents = () => {
     </div>
   );
 };
-
-
 
 export default MeetioEvents;
