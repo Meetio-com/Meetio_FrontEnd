@@ -2,13 +2,13 @@ import React from "react";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import event1 from "../event1.png";
-import event2 from "../event2.png";
-import event3 from "../event3.png";
-import videoCall from "../videoCall.png";
-import recordMeeting from "../recordMeeting.png";
-import captions from "../captions.png";
-import avatar from "../avatar.png";
+import event1 from "../assets/event1.png";
+import event2 from "../assets/event2.png";
+import event3 from "../assets/event3.png";
+import videoCall from "../assets/videoCall.png";
+import recordMeeting from "../assets/recordMeeting.png";
+import captions from "../assets/captions.png";
+import avatar from "../assets/avatar.png";
 
 // React Icons
 import {
