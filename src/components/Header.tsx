@@ -26,12 +26,12 @@ const Header = () => {
                     <li className="relative group">
                         <Link to="/" className="mr-4 text-sm text-[#000000]">Products</Link>
                         {/* Dropdown */}
-                        <div className="absolute left-0 top-14 mt-2 w-[300px] bg-white shadow-lg rounded-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300">
-                            <div className="grid gap-4 p-4">
+                        <div className="absolute left-0 top-14 mt-2 w-[900px] bg-white shadow-lg rounded-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300">
+                            <div className="grid grid-cols-2 gap-4 p-4">
                                 {products.map((product) => (
                                     <div key={product.id} className="flex flex-col">
                                         <h3 className="text-[16px] font-medium">{product.title}</h3>
-                                        <ul className="mt-2">
+                                        <ul className="mt-2 flex flex-col gap-5">
                                             {product.links.map((item) => (
                                                 <li key={item.link} className="flex items-center gap-3 cursor-pointer">
                                                     <img src={item.icon} alt="icon" className="w-5 h-5" />
@@ -47,12 +47,12 @@ const Header = () => {
                     <li className="relative group">
                         <Link to="/" className="mr-4 text-sm text-[#000000]">Solutions</Link>
                         {/* Dropdown */}
-                        <div className="absolute left-0 top-14 mt-2 w-[300px] bg-white shadow-lg rounded-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300">
-                            <div className="grid gap-4 p-4">
+                        <div className="absolute left-0 top-14 mt-2 w-[900px] bg-white shadow-lg rounded-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300">
+                            <div className="grid grid-cols-2 gap-4 p-4">
                                 {solutions.map((solution) => (
                                     <div key={solution.id} className="flex flex-col">
                                         <h3 className="text-[16px] font-medium">{solution.title}</h3>
-                                        <ul className="mt-2">
+                                        <ul className="mt-2 flex flex-col gap-5">
                                             {solution.links.map((item) => (
                                                 <li key={item.link} className="flex items-center gap-3 cursor-pointer">
                                                     <img src={item.icon} alt="icon" className="w-5 h-5" />
