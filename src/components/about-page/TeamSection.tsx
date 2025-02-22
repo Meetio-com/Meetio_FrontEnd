@@ -40,7 +40,7 @@ const TeamSection: React.FC = () => {
 
       <div className="flex justify-center mt-8">
         <Button
-          containerClass="bg-[#486284] text-white shadow-md"
+          containerClass="bg-[#008080] text-white shadow-md"
           to="/biographies"
         >
           Read biographies

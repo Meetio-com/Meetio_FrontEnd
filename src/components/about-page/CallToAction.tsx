@@ -3,7 +3,7 @@ import Button from "../Button";
 const CallToAction = () => {
   return (
     <div
-      className="relative bg-[#486284] text-white text-center py-16 px-4 
+      className="relative bg-[#008080] text-white text-center py-16 px-4 
                     clip-path"
     >
       <h2 className="text-xl md:text-4xl font-semibold md:w-[652px] md:mx-auto py-5 md:py-10">

@@ -13,8 +13,8 @@ const Footer = () => {
   return (
     <footer className="bg-gray-100 py-10 px-6 md:px-12">
       <div className="max-w-6xl mx-auto flex flex-col md:grid md:grid-cols-4 gap-8">
-        <div className="max-w-sm col-span-1">
-          <h2 className="text-2xl md:text-4xl font-semibold text-[#486284]">
+        <div className="col-span-1">
+          <h2 className="text-2xl md:text-4xl font-semibold text-[#008080]">
             Meetio
           </h2>
           <p className="text-black text-lg mt-2">
@@ -28,14 +28,14 @@ const Footer = () => {
             />
             <button
               type="submit"
-              className="absolute right-1 top-1 bottom-1 bg-[#486284] text-white px-4 hover:bg-gray-800 transition rounded-full"
+              className="absolute right-1 top-1 bottom-1 bg-[#008080] text-white px-4 hover:bg-[#008080]/50 transition rounded-full"
             >
               Submit
             </button>
           </form>
         </div>
 
-        <div className="col-span-3 grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div className="col-span-3 grid grid-cols-1 md:grid-cols-3 gap-3 md:pl-[120px]">
           {Object.entries(footer_links).map(([category, links]) => (
             <div key={category} className="pb-4 md:pb-0">
               <button
